@@ -1,3 +1,5 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/jgw96/toasty-toast)
+
 # Toasty Toast
 
 <!--
@@ -18,7 +20,7 @@ Toasty Toast is a simple Polymer 2.0 web component that gives you a nice little 
 piece of information for a specified time. A good real world example of a toast can be found on inbox by gmail and a
 multitude of Android apps.
 
-#### Note
+### Note
 This is built with Polymer 2.0 which is undergoing rapid development at the moment. I will do my hardest to
 update this component as Polymer 2.0 changes. If you ever find it broken dont hesitate to open bugs (:
 
