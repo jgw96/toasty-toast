@@ -1,6 +1,6 @@
 <link rel="import" href="bower_components/polymer/polymer-element.html">
 
-<dom-module id="toast-element">
+<dom-module id="toasty-toast">
 	<template>
 
 		<style>
@@ -27,9 +27,9 @@
 	<script>
 
     // Extend Polymer.Element base class
-    class ToastElement extends Polymer.Element {
+    class ToastyToast extends Polymer.Element {
 
-      static get is() { return 'toast-element' }
+      static get is() { return 'toasty-toast' }
 
       static get config() {
         // properties, observers meta data
@@ -76,7 +76,7 @@
     }
 
     // Register custom element definition using standard platform API
-    customElements.define(ToastElement.is, ToastElement);
+    customElements.define(ToastyToast.is, ToastyToast);
 
   </script>
 </dom-module>
