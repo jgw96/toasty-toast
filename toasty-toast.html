@@ -1,0 +1,82 @@
+<link rel="import" href="bower_components/polymer/polymer-element.html">
+
+<dom-module id="toast-element">
+	<template>
+
+		<style>
+			:host {
+				display: none;
+        background: #4a4e5a;
+        color: white;
+        padding: 1px;
+        width: 15rem;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        padding-left: 15px;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        display: none;
+			}
+		</style>
+
+    <p>[[message]]</p>
+
+	</template>
+
+	<script>
+
+    // Extend Polymer.Element base class
+    class ToastElement extends Polymer.Element {
+
+      static get is() { return 'toast-element' }
+
+      static get config() {
+        // properties, observers meta data
+         return {
+            properties: {
+              message: {
+                type: String
+              },
+              open: {
+                type: Boolean,
+                observer: '_openToast'
+              },
+              duration: {
+                type: Number
+              }
+            }
+          };
+      }
+
+      _openToast(opened) {
+        if (opened) {
+          this.setAttribute('opened', 'true');
+          this.style.display = 'block';
+
+          const animation = this.animate([
+            { transform: 'translateY(130%)' },
+            { transform: 'translateY(0)' }
+          ], {
+            easing: 'ease-in',
+            duration: 500
+          });
+
+          setTimeout(() => {
+            animation.reverse();
+            animation.onfinish = () => {
+              this.style.display = 'none';
+            };
+          }, this.duration);
+        } else {
+          this.removeAttribute('opened');
+        }
+      }
+
+    }
+
+    // Register custom element definition using standard platform API
+    customElements.define(ToastElement.is, ToastElement);
+
+  </script>
+</dom-module>
