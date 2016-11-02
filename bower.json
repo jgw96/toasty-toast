@@ -1,7 +1,23 @@
 {
-  "name": "toast-toast",
-  "private": true,
+  "name": "toasty-toast",
+  "homepage": "https://github.com/jgw96/toasty-toast",
+  "authors": [
+    "Justin Willis <jgw9617@gmail.com>"
+  ],
+  "description": "Simple Polymer 2.0 toast web component",
+  "main": "toasty-toast.html",
+  "moduleType": [
+    "globals"
+  ],
   "dependencies": {
     "polymer": "Polymer/polymer#2.0-preview"
-  }
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
