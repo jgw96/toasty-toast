@@ -34,7 +34,6 @@ import: `<link rel="import" href="bower_components/toasty-toast/toasty-toast.htm
 To open a toast simply set the open attribute to `"true"`, but before opening a toast
 be sure to have set a duration and a message.
 
-Attributes:
 1. `duration`: number, example: `duration="3000"`
 2. `message`: string, example: `message="hello world"`
 3. `open`: boolean, example: `open="true"`
